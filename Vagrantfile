@@ -97,22 +97,29 @@ Vagrant.configure("2") do |config|
 	#java8
 	add-apt-repository -y ppa:webupd8team/java
 	apt update
+	#java8 ensure non-interactive
 	echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
 	echo debconf shared/accepted-oracle-license-v1-1 seen true |  debconf-set-selections	
 	apt install -y oracle-java8-installer
 	
-    apt-get install -y maven git subversion eclipse eclipse-egit testng chromium-chromedriver ant groovy 
-	apt-get install -y mc joe 
+    apt-get install -y maven git git-flow git-cola meld subversion eclipse eclipse-egit testng chromium chromium-chromedriver ant groovy mc joe
 		
-	#intelliJ
+	#HOME
 	cd /home/vagrant
+	
+	#intelliJ
 	wget --quiet https://download.jetbrains.com/idea/ideaIC-2016.3.3.tar.gz
 
 	tar xf ideaIC*.tar.gz -C /opt/
 	rm ideaIC-2016.3.3.tar.gz
 	
-	#User configs 
-	cp -vR /vagrant/config /home/vagrant/
+	#User configs
+	#wget to solve cr/lf when host is not the linux
+	wget --quiet https://github.com/fransimo/vagrant-qa-automation-development-environment/archive/master.zip
+	unzip master
+	cp -vr vagrant-qa-automation-development-environment-master/config/* .
+	cp -vr vagrant-qa-automation-development-environment-master/config/.* .
+	rm -fR vagrant-qa-automation-development-environment-master
 		
 	chown -R vagrant.vagrant /home/vagrant
 	
@@ -126,5 +133,4 @@ Vagrant.configure("2") do |config|
   #	setxkbmap es
   #SHELL
 
-  
 end

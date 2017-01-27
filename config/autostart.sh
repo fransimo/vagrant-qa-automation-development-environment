@@ -19,8 +19,8 @@ export MAVEN_OPTS=" -Djava.awt.headless=true "
 #export GROOVY_HOME=/opt/groovy
 #export PATH=${PATH}:/opt/groovy/bin/:
 
-
 if [ -f ~/firstRun.sh ] ; then
-	bash firstRun.sh
-	mv firstRun.sh firstRun_runned.sh
+	mv firstRun.sh firstRun_running.sh
+	bash firstRun_running.sh
+	mv firstRun_running.sh firstRun_runned.sh
 fi
