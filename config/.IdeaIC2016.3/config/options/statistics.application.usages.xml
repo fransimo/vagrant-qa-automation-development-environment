@@ -1,0 +1,8 @@
+<application>
+  <component name="UsageTrigger">
+    <counts>
+      <entry feature="ideaapp.started" count="2" />
+      <entry feature="welcome.screen.WelcomeScreen.CreateNewProject" count="2" />
+    </counts>
+  </component>
+</application>

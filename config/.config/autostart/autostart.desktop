@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Autostart
+GenericName=Configuration auto start
+Comment=Some description about your script
+Exec=/home/vagrant/autostart.sh
+Terminal=true
+Type=Application
+X-GNOME-Autostart-enabled=true
