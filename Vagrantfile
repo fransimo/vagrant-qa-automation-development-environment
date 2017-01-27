@@ -20,8 +20,6 @@ Vagrant.configure("2") do |config|
   # `vagrant box outdated`. This is not recommended.
   # config.vm.box_check_update = false
   
-  
-
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
@@ -102,7 +100,7 @@ Vagrant.configure("2") do |config|
 	echo debconf shared/accepted-oracle-license-v1-1 seen true |  debconf-set-selections	
 	apt install -y oracle-java8-installer
 	
-    apt-get install -y maven git git-flow git-cola meld subversion eclipse eclipse-egit testng chromium chromium-chromedriver ant groovy mc joe
+    apt-get install -y maven git git-flow git-cola meld subversion eclipse eclipse-egit testng chromium-chromedriver ant groovy mc joe
 		
 	#HOME
 	cd /home/vagrant
@@ -126,7 +124,7 @@ Vagrant.configure("2") do |config|
   SHELL
   
   #reboot
-  config.vm.provision :reload
+  #config.vm.provision :reload
 
   #config.vm.provision "shell", inline: <<-SHELL
   #	#anything after the reload
