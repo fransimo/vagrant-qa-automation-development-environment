@@ -1,6 +1,6 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
-Vagrant.require_plugin "vagrant-reload"
+#Vagrant.require_plugin "vagrant-reload"
 
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
 # configures the configuration version (we support older styles for
@@ -111,8 +111,8 @@ Vagrant.configure("2") do |config|
 	tar xf ideaIC*.tar.gz -C /opt/
 	rm ideaIC-2016.3.3.tar.gz
 	
-	#keyboard config
-	cp -R /vagrant/home_config /home/vagrant/
+	#User configs 
+	cp -vR /vagrant/config /home/vagrant/
 		
 	chown -R vagrant.vagrant /home/vagrant
 	
@@ -121,10 +121,10 @@ Vagrant.configure("2") do |config|
   #reboot
   config.vm.provision :reload
 
-  config.vm.provision "shell", inline: <<-SHELL
-    #anything after the reload
-	setxkbmap es
-  SHELL
+  #config.vm.provision "shell", inline: <<-SHELL
+  #	#anything after the reload
+  #	setxkbmap es
+  #SHELL
 
   
 end
