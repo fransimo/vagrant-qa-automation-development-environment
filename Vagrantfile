@@ -124,13 +124,14 @@ Vagrant.configure("2") do |config|
 	cp -vr vagrant-qa-automation-development-environment-master/config/.* .
 	
 	desktop-file-install vagrant-qa-automation-development-environment-master/config/.gnome/apps/*
-	update-desktop-database
-	
-	rm -fR vagrant-qa-automation-development-environment-master
 	
 	mv /home/vagrant/selenium-logo.png /opt/selenium
-		
+	chmod a+x /home/vagrant/selenium.sh
+	
 	chown -R vagrant.vagrant /home/vagrant
+	rm -fR vagrant-qa-automation-development-environment-master
+	
+	update-desktop-database
 	
   SHELL
   
