@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Selenium
+Icon=/opt/selenium/selenium-logo.png
+Exec=/home/vagrant/selenium.sh 
+Terminal=true
+

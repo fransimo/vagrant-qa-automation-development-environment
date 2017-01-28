@@ -30,7 +30,5 @@ export MAVEN_OPTS=" -Djava.awt.headless=true "
 #export GROOVY_HOME=/opt/groovy
 #export PATH=${PATH}:/opt/groovy/bin/:
 
-java -jar /opt/selenium/selenium-server-standalone-3.0.1.jar 
-
 #mvn archetype:generate -DarchetypeGroupId=ru.stqa.selenium -DarchetypeArtifactId=webdriver-testng-archetype -DarchetypeVersion=3.0 -DgroupId=com.hotelbeds -DartifactId=test
 

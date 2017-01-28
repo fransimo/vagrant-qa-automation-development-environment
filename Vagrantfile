@@ -112,7 +112,7 @@ Vagrant.configure("2") do |config|
 	tar xf ideaIC*.tar.gz -C /opt/
 	rm ideaIC-2016.3.3.tar.gz
 	
-	wget --quite http://selenium-release.storage.googleapis.com/3.0/selenium-server-standalone-3.0.1.jar
+	wget --quiet http://selenium-release.storage.googleapis.com/3.0/selenium-server-standalone-3.0.1.jar
 	mkdir /opt/selenium
 	mv selenium-server-standalone-3.0.1.jar /opt/selenium
 	
@@ -122,7 +122,13 @@ Vagrant.configure("2") do |config|
 	unzip master
 	cp -vr vagrant-qa-automation-development-environment-master/config/* .
 	cp -vr vagrant-qa-automation-development-environment-master/config/.* .
+	
+	desktop-file-install vagrant-qa-automation-development-environment-master/config/.gnome/apps/*
+	update-desktop-database
+	
 	rm -fR vagrant-qa-automation-development-environment-master
+	
+	mv /home/vagrant/selenium-logo.png /opt/selenium
 		
 	chown -R vagrant.vagrant /home/vagrant
 	

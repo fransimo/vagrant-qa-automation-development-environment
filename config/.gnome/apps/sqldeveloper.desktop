@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Exec=/opt/sqldeveloper/sqldeveloper.sh
+Terminal=false
+StartupNotify=true
+Type=Application
+Icon=/opt/sqldeveloper/icon.png
+Name=Oracle SQL Developer

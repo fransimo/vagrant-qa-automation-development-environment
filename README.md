@@ -7,6 +7,7 @@ This image is an Ubuntu Desktop 16.04 LTS plus:
   -  eclipse, eclipse-egit, eclipse-maven, eclipse-testng
   -  IntelliJ
   -  testng 
+  -  selenium stand alone server
   -  firefox, chromium, chromium-chromedriver
   -  groovy
   -  es and en languajes packs
@@ -22,3 +23,10 @@ Pre:
 HOW TO:
   -  vagrant plugin install vagrant-reload
   -  vagrant up
+  
+  - add SQL Developer 
+    - go to http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html
+	- download Other Platforms .zip
+	- sudo unzip sqldeveloper-*-no-jre.zip -d /opt/
+	- chmod a+x /opt/sqldeveloper/sqldeveloper.sh
+	- close session and logon
