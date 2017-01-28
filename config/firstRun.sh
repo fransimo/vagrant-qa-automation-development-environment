@@ -12,5 +12,5 @@ gsettings set com.canonical.Unity.Launcher favorites "['application://ubiquity.d
 #InelliJ launch
 /opt/idea-IC-163.11103.6/bin/idea.sh &
 
-firefox https://github.com/fransimo/vagrant-qa-automation-development-environment/blob/master/README.md
+firefox https://github.com/fransimo/vagrant-qa-automation-development-environment/blob/master/README.md &
 
