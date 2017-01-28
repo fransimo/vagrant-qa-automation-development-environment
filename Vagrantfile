@@ -48,9 +48,9 @@ Vagrant.configure("2") do |config|
     # Display the VirtualBox GUI when booting the machine
     vb.gui = true
     # Customize the amount of memory on the VM:
-    vb.memory = "8196"
+    vb.memory = "4096"
 	# CPUs
-	vb.cpus = 3
+	vb.cpus = 4
 	# Clipboard
 	vb.customize ['modifyvm', :id, '--clipboard', 'bidirectional'] 
   end
@@ -69,12 +69,9 @@ Vagrant.configure("2") do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
-	#proxy
-	#echo 'Acquire::http::Proxy "http://proxy1.services.gfc:3128";' >> /etc/apt/apt.conf
-	#export http_proxy=http://proxy1.services.gfc:3128
-	
-	echo 'Acquire::http::Proxy "http://192.168.1.19:3128";' >> /etc/apt/apt.conf
-	export http_proxy=http://192.168.1.19:3128
+	#proxy	
+	#echo 'Acquire::http::Proxy "http://192.168.1.19:3128";' >> /etc/apt/apt.conf
+	#export http_proxy=http://192.168.1.19:3128
     
 	#update repo info
     apt-get update
@@ -118,7 +115,7 @@ Vagrant.configure("2") do |config|
 	
 	#smartGit
 	wget --quiet http://www.syntevo.com/static/smart/download/smartgit/smartgit-17_0_1.deb
-	dpkg -i smartgit-17_0_1.debs
+	dpkg -i smartgit-17_0_1.deb
 	
 	#User configs
 	#wget to solve cr/lf when host is not the linux

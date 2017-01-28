@@ -14,3 +14,6 @@ gsettings set com.canonical.Unity.Launcher favorites "['application://ubiquity.d
 
 firefox https://github.com/fransimo/vagrant-qa-automation-development-environment/blob/master/README.md &
 
+#wait 60s before reneming file
+sleep 60s
+
