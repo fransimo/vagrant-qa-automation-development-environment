@@ -91,6 +91,7 @@ Vagrant.configure("2") do |config|
 	apt-get install `check-language-support -l en`
 	
 	#install Dev Software
+	#apt-get install -y javacc
 	
 	#java8
 	add-apt-repository -y ppa:webupd8team/java
@@ -100,7 +101,7 @@ Vagrant.configure("2") do |config|
 	echo debconf shared/accepted-oracle-license-v1-1 seen true |  debconf-set-selections	
 	apt install -y oracle-java8-installer
 	
-    apt-get install -y maven git git-flow git-cola meld subversion eclipse eclipse-egit testng chromium-chromedriver ant groovy mc joe
+    apt-get install -y maven git git-flow git-cola meld subversion eclipse eclipse-egit testng chromium-browser chromium-chromedriver ant groovy docker mc joe
 		
 	#HOME
 	cd /home/vagrant
@@ -110,6 +111,10 @@ Vagrant.configure("2") do |config|
 
 	tar xf ideaIC*.tar.gz -C /opt/
 	rm ideaIC-2016.3.3.tar.gz
+	
+	wget --quite http://selenium-release.storage.googleapis.com/3.0/selenium-server-standalone-3.0.1.jar
+	mkdir /opt/selenium
+	mv selenium-server-standalone-3.0.1.jar /opt/selenium
 	
 	#User configs
 	#wget to solve cr/lf when host is not the linux
@@ -124,7 +129,7 @@ Vagrant.configure("2") do |config|
   SHELL
   
   #reboot
-  #config.vm.provision :reload
+  config.vm.provision :reload
 
   #config.vm.provision "shell", inline: <<-SHELL
   #	#anything after the reload
