@@ -116,6 +116,10 @@ Vagrant.configure("2") do |config|
 	mkdir /opt/selenium
 	mv selenium-server-standalone-3.0.1.jar /opt/selenium
 	
+	#smartGit
+	wget --quiet http://www.syntevo.com/static/smart/download/smartgit/smartgit-17_0_1.deb
+	dpkg -i smartgit-17_0_1.debs
+	
 	#User configs
 	#wget to solve cr/lf when host is not the linux
 	wget --quiet https://github.com/fransimo/vagrant-qa-automation-development-environment/archive/master.zip

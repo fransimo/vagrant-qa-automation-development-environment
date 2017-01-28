@@ -3,7 +3,7 @@
 This image is an Ubuntu Desktop 16.04 LTS plus:
   -  Oracle Java 8
   -  maven,  ant  
-  -  git, git-flow, subversion 
+  -  git, git-flow, smartGit, subversion 
   -  eclipse, eclipse-egit, eclipse-maven, eclipse-testng
   -  IntelliJ
   -  testng 
@@ -25,9 +25,9 @@ HOW TO:
   -  vagrant plugin install vagrant-reload
   -  vagrant up
   
-  - add SQL Developer 
+  - add SQL Developer (need an Oracle account)
     - go to http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html
 	- download Other Platforms .zip
-	- sudo unzip sqldeveloper-*-no-jre.zip -d /opt/
-	- chmod a+x /opt/sqldeveloper/sqldeveloper.sh
+	- sudo unzip Downloads/sqldeveloper-*-no-jre.zip -d /opt/
+	- sudo chmod a+x /opt/sqldeveloper/sqldeveloper.sh
 	- close session and logon
