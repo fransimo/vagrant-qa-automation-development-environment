@@ -21,6 +21,7 @@ Pre:
   -  Default configuration for VM es 8G RAM, 3 core, bidireccional clipboard, active GUI
 
 HOW TO:
+  -  clone this repo
   -  vagrant plugin install vagrant-reload
   -  vagrant up
   
