@@ -4,7 +4,17 @@ This repo documents how was created the image fransimo/ubuntu-16.04-desktop-deve
 
 To use the already done image you only need to do:
   -  *vagrant init fransimo/ubuntu-16.04-desktop-development*
-  -  uncomment config.vm.provider section in Vagrantfile to make vb.gui = true
+  -  replace config.vm.provider section by
+  `config.vm.provider "virtualbox" do |vb|
+    # Display the VirtualBox GUI when booting the machine
+    vb.gui = true
+    # Customize the amount of memory on the VM:
+    vb.memory = "4096"
+	# CPUs
+	vb.cpus = 4
+	# Clipboard
+	vb.customize ['modifyvm', :id, '--clipboard', 'bidirectional'] 
+  end`
   -  *vagrant up --provider virtualbox*
   -  default keyboard layout is Spanish to change it edit ~/autostart.sh en change *setxkbmap es* to *setxkbmap en*
 
