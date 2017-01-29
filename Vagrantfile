@@ -98,7 +98,7 @@ Vagrant.configure("2") do |config|
 	echo debconf shared/accepted-oracle-license-v1-1 seen true |  debconf-set-selections	
 	apt install -y oracle-java8-installer
 	
-    apt-get install -y maven git git-flow git-cola meld subversion eclipse eclipse-egit testng chromium-browser chromium-chromedriver ant groovy docker mc joe
+    apt-get install -y maven git git-flow git-cola meld subversion eclipse eclipse-egit testng chromium-browser chromium-chromedriver ant groovy docker jmeter jmeter-junit jmeter-java jmeter-http mc joe
 		
 	#HOME
 	cd /home/vagrant
