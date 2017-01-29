@@ -9,11 +9,11 @@ To use the already done image you only need to do:
     config.vm.provider "virtualbox" do |vb|
        # Display the VirtualBox GUI when booting the machine
        vb.gui = true
-    # Customize the amount of memory on the VM:
+       # Customize the amount of memory on the VM:
        vb.memory = "4096"
-    # CPUs
+       # CPUs
        vb.cpus = 4
-    # Clipboard
+       # Clipboard
        vb.customize ['modifyvm', :id, '--clipboard', 'bidirectional'] 
     end
 ```
