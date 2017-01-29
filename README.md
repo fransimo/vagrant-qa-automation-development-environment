@@ -1,6 +1,6 @@
 # Vagrant automated VM for QA Automation development
 
-This repo documents how was create the image fransimo/ubuntu-16.04-desktop-development
+This repo documents how was created the image fransimo/ubuntu-16.04-desktop-development
 
 To use the already done image you only need to do:
   -  *vagrant init fransimo/ubuntu-16.04-desktop-development*
