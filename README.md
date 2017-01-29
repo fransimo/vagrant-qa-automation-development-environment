@@ -4,7 +4,7 @@ This repo documents how was created the image fransimo/ubuntu-16.04-desktop-deve
 
 To use the already done image you only need to do:
   -  *vagrant init fransimo/ubuntu-16.04-desktop-development*
-  -  replace config.vm.provider section by
+  -  replace config.vm.provider in your Vagranfile section by
 ```
     config.vm.provider "virtualbox" do |vb|
        # Display the VirtualBox GUI when booting the machine
