@@ -20,10 +20,8 @@ This image is an Ubuntu Desktop 16.04 LTS plus:
   -  groovy
   -  es and en languajes packs
 
-Base image is: 
-  *vagrant init bento/ubuntu-16.04*
-
-Pre:
+Context:
+  -  Base image is *vagrant init bento/ubuntu-16.04*
   -  Image is optimized for Virtual Box, but not restricted to
   -  Make sure ssh and VBox are in path
   -  Default configuration for VM es 4G RAM, 4 core, bidireccional clipboard, active GUI
