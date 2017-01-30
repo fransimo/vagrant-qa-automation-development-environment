@@ -29,6 +29,7 @@ This image is an Ubuntu Desktop 16.04 LTS plus:
   -  testng 
   -  selenium stand alone server
   -  firefox, chromium, chromium-chromedriver
+  -  jmeter
   -  groovy
   -  es and en languajes packs
 
