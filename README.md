@@ -27,11 +27,12 @@ This image is an Ubuntu Desktop 16.04 LTS plus:
   -  eclipse, eclipse-egit, eclipse-maven, eclipse-testng
   -  IntelliJ
   -  testng 
-  -  selenium stand alone server
+  -  selenium stand alone server with geckco driver
   -  firefox, chromium, chromium-chromedriver
   -  jmeter
   -  groovy
   -  es and en languajes packs
+  -  autoupdate system 
 
 Context:
   -  Base image is *vagrant init bento/ubuntu-16.04*
