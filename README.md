@@ -53,6 +53,8 @@ If you want to generate a new image based on this one:
   -  vagrant package
 
 ## Release notes 
+### 1.4
+ - jmeter 3.1 
 ### 1.3
  - added gecko driver for selenium
  - auto update system from github to populate changes to provisioned machines 
