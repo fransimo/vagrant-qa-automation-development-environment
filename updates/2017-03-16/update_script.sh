@@ -9,6 +9,7 @@ ret=$?
 
 if [ $ret -eq 0 ] ;  then
 	#jmeter
+	rm apache-jmeter-3.1.tgz*
 	wget http://apache.rediris.es/jmeter/binaries/apache-jmeter-3.1.tgz
 	sudo tar xf apache-jmeter-3.1.tgz -C /opt/
 	if [ $? -eq 0 ] ; then
