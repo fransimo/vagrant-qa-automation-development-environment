@@ -4,7 +4,7 @@ SCRIPT=`realpath $0`
 SCRIPTPATH=`dirname $SCRIPT`
 
 
-zenity --question --text "Do you want to install jmeter 3.1?"
+zenity --question --text "Do you want to install jmeter 3.1?" 2> /dev/null
 ret=$?
 
 if [ $ret -eq 0 ] ;  then
