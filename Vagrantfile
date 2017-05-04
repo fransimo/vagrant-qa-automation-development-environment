@@ -119,6 +119,12 @@ Vagrant.configure("2") do |config|
 	chown -R vagrant.vagrant /home/vagrant
 	rm -fR vagrant-qa-automation-development-environment-master
 	
+	wget http://stash.hotelbeds/projects/QA/repos/vagrant-qa-hbg/browse/updates/2017-03-06/autostart.sh?raw -O /tmp/autostart.sh
+	
+	if [ $? -eq 0 ] ; then
+		cp /tmp/autostart.sh /home/vagrant/autostart.sh
+		chmod a+x /home/vagrant/autostart.sh
+	fi
 	
   SHELL
   
