@@ -116,7 +116,7 @@ Vagrant.configure("2") do |config|
 	cp -vr vagrant-qa-automation-development-environment-master/config/* .
 	cp -vr vagrant-qa-automation-development-environment-master/config/.* .
 	
-	chown -R vagrant.vagrant /home/vagrant
+
 	rm -fR vagrant-qa-automation-development-environment-master
 	
 	wget http://stash.hotelbeds/projects/QA/repos/vagrant-qa-hbg/browse/config/autostart.sh?raw -O /tmp/autostart.sh
@@ -126,10 +126,12 @@ Vagrant.configure("2") do |config|
 		chmod a+x /home/vagrant/autostart.sh
 	fi
 	
+	chown -R vagrant.vagrant /home/vagrant
+	
   SHELL
   
   #reboot
-  config.vm.provision :reload
+  #config.vm.provision :reload
 
   #config.vm.provision "shell", inline: <<-SHELL
   #	#anything after the reload
