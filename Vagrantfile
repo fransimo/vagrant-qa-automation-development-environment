@@ -80,7 +80,7 @@ Vagrant.configure("2") do |config|
 	export DEBIAN_FRONTEND=noninteractive 
 	
 	#update any package from the base distro
-	apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" dist-upgrade
+	#apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" dist-upgrade
 	
 	#make the distro a "desktop"
 	#apt-get install -y ubuntu-desktop language-pack-gnome-es-base language-pack-es language-pack-gnome-es language-pack-es-base language-pack-gnome-es-base
@@ -98,15 +98,18 @@ Vagrant.configure("2") do |config|
 	echo debconf shared/accepted-oracle-license-v1-1 seen true |  debconf-set-selections	
 	apt install -y oracle-java8-installer
 	
-    apt-get install -y maven git git-flow git-cola meld subversion ant groovy docker jmeter jmeter-junit jmeter-java jmeter-http mc joe
+    apt-get install -y maven git git-flow git-cola meld subversion ant groovy docker mc joe
+	
+	#minimal graphics to run firefox 
+	apt-get intall -y xorg firefox
 		
 	#HOME
 	cd /home/vagrant
 	
 	
-	wget --quiet http://selenium-release.storage.googleapis.com/3.0/selenium-server-standalone-3.0.1.jar
-	mkdir /opt/selenium
-	mv selenium-server-standalone-3.0.1.jar /opt/selenium
+	#wget --quiet http://selenium-release.storage.googleapis.com/3.0/selenium-server-standalone-3.0.1.jar
+	#mkdir /opt/selenium
+	#mv selenium-server-standalone-3.0.1.jar /opt/selenium
 	
 	
 	#User configs
@@ -116,7 +119,6 @@ Vagrant.configure("2") do |config|
 	cp -vr vagrant-qa-automation-development-environment-master/config/* .
 	cp -vr vagrant-qa-automation-development-environment-master/config/.* .
 	
-
 	rm -fR vagrant-qa-automation-development-environment-master
 	
 	wget http://stash.hotelbeds/projects/QA/repos/vagrant-qa-hbg/browse/config/autostart.sh?raw -O /tmp/autostart.sh
