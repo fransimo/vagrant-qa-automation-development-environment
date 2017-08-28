@@ -53,6 +53,9 @@ Vagrant.configure("2") do |config|
 	vb.cpus = 4
 	# Clipboard
 	vb.customize ['modifyvm', :id, '--clipboard', 'bidirectional'] 
+	# Video configuration
+	vb.customize ["modifyvm", :id, "--vram", "64"]
+	vb.customize ["modifyvm", :id, "--accelerate3d", "on"]	
   end
   #
   # View the documentation for the provider you are using for more
